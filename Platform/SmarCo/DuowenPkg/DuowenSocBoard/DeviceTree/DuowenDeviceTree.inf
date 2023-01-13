@@ -1,0 +1,28 @@
+## @file
+#  Device tree description of the Hifive Unleashed platform
+#
+#  Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION    = 0x0001001A
+  BASE_NAME      = DuowenDeviceTree
+  FILE_GUID      = 35D79F95-9A26-443F-B7F1-9B309400A707 # gDtPlatformDefaultDtbFileGuid
+  MODULE_TYPE    = USER_DEFINED
+  VERSION_STRING = 1.0
+
+[Sources]
+  duowen.dts
+  config.h
+  sbi-clock.h
+  sbi-clock-duowen.h
+  sbi-clock-duowen-none.h
+  sbi-clock-duowen-fake.h
+  sbi-clock-duowen-real.h
+
+[Packages]
+  MdePkg/MdePkg.dec

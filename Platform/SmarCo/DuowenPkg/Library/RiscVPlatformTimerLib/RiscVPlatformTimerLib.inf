@@ -1,0 +1,34 @@
+## @file
+#  RISC-V CPU lib to override timer mechanism for DUOWEN platform.
+#
+#  Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001b
+  BASE_NAME                      = RiscVPlatformTimerLib
+  FILE_GUID                      = C21260CF-4B9A-4214-93CC-63060AC3F42F
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = RiscVPlatformTimerLib
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = RISCV64
+#
+
+[Sources]
+
+[Sources.RISCV64]
+  RiscVPlatformTimerLib.S
+
+[Packages]
+  MdeModulePkg/MdeModulePkg.dec
+  MdePkg/MdePkg.dec
+  Platform/SmarCo/DuowenPkg/DuowenPkg.dec
+  Silicon/RISC-V/ProcessorPkg/RiscVProcessorPkg.dec

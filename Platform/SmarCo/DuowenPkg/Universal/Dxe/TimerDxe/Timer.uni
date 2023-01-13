@@ -1,0 +1,14 @@
+// /** @file
+// RISC-V Timer Arch protocol strings.
+//
+// Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+// Author: Lv Zheng <zhenglv@smart-core.cn>
+//
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+//
+// **/
+
+
+#string STR_MODULE_ABSTRACT             #language en-US "RISC-V timer driver that provides Timer Arch protocol"
+
+#string STR_MODULE_DESCRIPTION          #language en-US "RISC-V timer driver that provides Timer Arch protocol."

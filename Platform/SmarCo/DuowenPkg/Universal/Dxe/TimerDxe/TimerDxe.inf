@@ -1,0 +1,54 @@
+## @file
+#  RISC-V Timer Arch protocol module for DUOWEN platform
+#
+# Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+#
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001b
+  BASE_NAME                      = Timer
+  MODULE_UNI_FILE                = Timer.uni
+  FILE_GUID                      = 13680BD5-AD27-4BD7-A715-74E849C94463
+  MODULE_TYPE                    = DXE_DRIVER
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = TimerDriverInitialize
+#
+# The following information is for reference only and not required by the build
+# tools.
+#
+#  VALID_ARCHITECTURES           = RISCV64
+#
+[Packages]
+  MdePkg/MdePkg.dec
+  Platform/SmarCo/DuowenPkg/DuowenPkg.dec
+  Silicon/RISC-V/ProcessorPkg/RiscVProcessorPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  DebugLib
+  IoLib
+  MachineModeTimerLib
+  RiscVCpuLib
+  RiscVEdk2SbiLib
+  UefiBootServicesTableLib
+  UefiDriverEntryPoint
+
+[Sources]
+  Timer.h
+  Timer.c
+
+[Protocols]
+  gEfiCpuArchProtocolGuid       ## CONSUMES
+  gEfiTimerArchProtocolGuid     ## PRODUCES
+
+[Pcd]
+  gUefiRiscVPkgTokenSpaceGuid.PcdRiscVMachineTimerFrequencyInHerz
+
+[Depex]
+  gEfiCpuArchProtocolGuid
+
+[UserExtensions.TianoCore."ExtraFiles"]
+  TimerExtra.uni

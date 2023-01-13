@@ -1,0 +1,46 @@
+## @file  U5SeriesPkg.dec
+#  This Package provides modules and libraries for SmarCo DUOWEN platforms.
+#
+#  Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  DEC_SPECIFICATION              = 0x0001001b
+  PACKAGE_NAME                   = DuowenPkg
+  PACKAGE_UNI_FILE               = DuowenPkg.uni
+  PACKAGE_GUID                   = 79DBE272-C3F4-4947-BE67-3072E058AFC5
+  PACKAGE_VERSION                = 1.0
+
+[Includes]
+  Include
+
+[LibraryClasses]
+
+[Guids]
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid  = {0xB885B86C, 0xB58F, 0x4A97, { 0x98, 0x99, 0x31, 0x6D, 0x60, 0x90, 0xFF, 0x02 }}
+
+[PcdsFixedAtBuild]
+  # PLL frequencies passed from FSBL
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdSocPllFreq|800000000|UINT32|0x00001000
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdDdrBusPllFreq|800000000|UINT32|0x00001001
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdDdrPllFreq|800000000|UINT32|0x00001002
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdCfabPllFreq|1000000000|UINT32|0x00001003
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdClPllFreq|1500000000|UINT32|0x00001004
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdSfabPllFreq|100000000|UINT32|0x00001005
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdEthPllFreq|78125000|UINT32|0x00001006
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdSgmiiPllFreq|125000000|UINT32|0x00001007
+  # DDR related
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdDdrMemorySize|0x80000000|UINT64|0x00001010
+  # UART related
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartPortId|0x0|UINT8|0x00001020
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartBaudRate|115200|UINT32|0x00001021
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartFifoDepth|0x40|UINT16|0x00001022
+
+[PcdsPatchableInModule]
+
+[UserExtensions.TianoCore."ExtraFiles"]
+  DuowenPkg.uni

@@ -1,0 +1,14 @@
+// /** @file
+// SmarCo DUOWEN Package Localized Strings and Content.
+//
+// Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+// Author: Lv Zheng <zhenglv@smart-core.cn>
+//
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+//
+// **/
+
+
+#string STR_PACKAGE_ABSTRACT            #language en-US "Provides SmarCo RISC-V DUOWEN platform modules and libraries"
+
+#string STR_PACKAGE_DESCRIPTION         #language en-US "This Package SmarCo RISC-V DUOWEN platform modules and libraries."

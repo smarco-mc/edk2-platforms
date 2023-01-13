@@ -1,0 +1,26 @@
+## @file  Duowen.dec
+#  This Package provides SmarCo DUOWEN modules and libraries.
+#
+#  Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  DEC_SPECIFICATION              = 0x0001001b
+  PACKAGE_NAME                   = Duowen
+  PACKAGE_UNI_FILE               = Duowen.uni
+  PACKAGE_GUID                   = F0539986-947D-4E63-9E06-952304A81BFE
+  PACKAGE_VERSION                = 1.0
+
+[Includes]
+
+[LibraryClasses]
+
+[Guids]
+  gUefiRiscVPlatformDuowenPkgTokenSpaceGuid  = {0xDFD87009, 0x27A1, 0x41DD, { 0x84, 0xB1, 0x35, 0xB4, 0xB9, 0x0D, 0x17, 0x63 }}
+
+[UserExtensions.TianoCore."ExtraFiles"]
+  DuowenPkgExtra.uni

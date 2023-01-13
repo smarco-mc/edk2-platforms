@@ -1,0 +1,44 @@
+## @file
+#  Library instance for SerialIo library class
+#
+#  Copyright (c) 2022-2023, SmarCo Limited. All rights reserved.<BR>
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001b
+  BASE_NAME                      = DuowenSerialPortLib
+  MODULE_UNI_FILE                = DuowenSerialPortLib.uni
+  FILE_GUID                      = 3103AF85-1F5F-4F5B-A562-F44B8CFFFA5D
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = SerialPortLib
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = RISCV64
+#
+[Packages]
+  MdePkg/MdePkg.dec
+  Platform/RISC-V/PlatformPkg/RiscVPlatformPkg.dec
+  Silicon/RISC-V/ProcessorPkg/RiscVProcessorPkg.dec
+  Platform/SmarCo/DuowenPkg/DuowenPkg.dec
+
+[LibraryClasses]
+  BaseLib
+  IoLib
+  RiscVOpensbiLib
+
+[FixedPcd]
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartPortId
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartFifoDepth
+
+[Pcd]
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdUartBaudRate
+  gSmarCoDuowenPlatformsPkgTokenSpaceGuid.PcdSfabPllFreq
+
+[Sources]
+  SerialPortLib.c
