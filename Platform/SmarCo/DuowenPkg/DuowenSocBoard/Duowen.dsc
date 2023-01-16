@@ -169,7 +169,7 @@
   ReportStatusCodeLib|MdeModulePkg/Library/PeiReportStatusCodeLib/PeiReportStatusCodeLib.inf
   ExtractGuidedSectionLib|MdePkg/Library/BaseExtractGuidedSectionLib/BaseExtractGuidedSectionLib.inf
   Edk2OpensbiPlatformWrapperLib|Platform/RISC-V/PlatformPkg/Library/Edk2OpensbiPlatformWrapperLib/Edk2OpensbiPlatformWrapperLib.inf
-  RiscVSpecialPlatformLib|Platform/SiFive/U5SeriesPkg/FreedomU540HiFiveUnleashedBoard/Library/RiscVSpecialPlatformLib/RiscVSpecialPlatformLib.inf
+  RiscVSpecialPlatformLib|Platform/SmarCo/DuowenPkg/DuowenSocBoard/Library/RiscVSpecialPlatformLib/RiscVSpecialPlatformLib.inf
 
 !ifdef $(SOURCE_DEBUG_ENABLE)
   DebugAgentLib|SourceLevelDebugPkg/Library/DebugAgent/SecPeiDebugAgentLib.inf
@@ -227,8 +227,7 @@
 #
 # RISC-V core libraries
 #
-  SiliconSiFiveU54CoreInfoLib|Silicon/SiFive/U54/Library/PeiCoreInfoHobLib/PeiCoreInfoHobLib.inf
-  RiscVCoreplexInfoLib|Platform/SiFive/U5SeriesPkg/Library/PeiCoreInfoHobLib/PeiCoreInfoHobLib.inf
+  RiscVCoreplexInfoLib|Platform/RISC-V/PlatformPkg/Library/PeiCoreInfoHobLibNull/PeiCoreInfoHobLib.inf
 
 [LibraryClasses.common.DXE_CORE]
   TimerLib|Silicon/RISC-V/ProcessorPkg/Library/RiscVTimerLib/BaseRiscVTimerLib.inf

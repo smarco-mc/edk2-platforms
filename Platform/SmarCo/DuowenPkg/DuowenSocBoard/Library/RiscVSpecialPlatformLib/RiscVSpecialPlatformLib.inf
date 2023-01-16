@@ -1,0 +1,37 @@
+## @file
+#  Null library instance to provide platform_override for the
+#  special RISC-V platform. This module incorporates with
+#  OpensbiPlatformLib and RISC-V Opensbi library.
+#
+#  Copyright (c) 2023, SmarCo Limited. All rights reserved.<BR>
+#  Author: Lv Zheng <zhenglv@smart-core.cn>
+#
+#  SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+##
+
+[Defines]
+  INF_VERSION                    = 0x0001001b
+  BASE_NAME                      = RiscVSpecialPlatformLib
+  FILE_GUID                      = 67395741-05F3-4DC9-A4A3-BA6E88373AF7
+  MODULE_TYPE                    = BASE
+  VERSION_STRING                 = 1.0
+  LIBRARY_CLASS                  = RiscVSpecialPlatformLib|SEC
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = RISCV64
+#
+
+[Sources]
+ SmarCoDuowen.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  Platform/RISC-V/PlatformPkg/RiscVPlatformPkg.dec
+  Silicon/RISC-V/ProcessorPkg/RiscVProcessorPkg.dec
+
+[LibraryClasses]
+  BaseLib

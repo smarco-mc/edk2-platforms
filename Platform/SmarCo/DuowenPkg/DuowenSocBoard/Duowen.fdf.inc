@@ -59,7 +59,7 @@ DEFINE VARS_FTW_SPARE_SIZE           = 0x00018000
 # Device Tree memory region
 #
 DEFINE DTB_OFFSET                    = 0x00840000
-DEFINE DTB_SIZE                      = 0x00002000
+DEFINE DTB_SIZE                      = 0x00004000
 
 #
 # Scratch area memory region
